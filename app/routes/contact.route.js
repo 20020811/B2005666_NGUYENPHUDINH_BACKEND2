@@ -6,10 +6,10 @@ const router = express.Router();
 router.route("/")
     .get(contacts.findALL)
     .post(contacts.create)
-    .delete(contacts.delete);
+    .delete(contacts.deleteAll);
 
 router.route("/favorite")
-.get(contacts.findALLFavorite);
+    .get(contacts.findALLFavorite);
 
 router.route("/:id")
     .get(contacts.findOne)
